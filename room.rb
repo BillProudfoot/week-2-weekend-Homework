@@ -10,7 +10,7 @@ attr_reader :name, :room, :guests, :song
     
     @guests = []
     @name = name
-    @song = []
+    @songs = []
 
 #     @rooms = room
 #     # 
@@ -24,20 +24,24 @@ attr_reader :name, :room, :guests, :song
     @guests << guest
   end 
 
+  def add_another_guest_to_room(guest)
+    @guests << guest
+  end 
+
   def remove_guest_from_room()
- #   binding.pry
+   # binding.pry
     @guests.delete_at(0)
   return @guests.length()
   end
 
   def song_count()
-    return @songs.legnth()
+    return @songs.length()
   end
 
   def add_song(song)
-    @song << song
-    # binding.pry
-  end
+    @songs << song
+   # binding.pry
+  end 
 
 
 
